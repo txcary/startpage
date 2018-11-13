@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+{% for group in groupList %}
+<hr>
+<div class="row">
+	<div class="col-md-2">
+	{{ group.name }}
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+	{% for site in group.siteList %}
+			<div class="col-md-3">
+			<a href="{{ site.url }}"> 
+				<img width="24" height="24" src="{{ site.image }}" />{{ site.name }}
+			</a>
+			</div>
+	{% endfor %}
+		</div>
+	</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
