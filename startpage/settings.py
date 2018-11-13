@@ -25,7 +25,7 @@ SECRET_KEY = '88x^%#w)hot66-%wc0k66hj#rn5*9pkpn-p#b531w5)9%xp1py'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.31.191']
+ALLOWED_HOSTS = ['192.168.31.191','www.txcary.com','101.200.208.250']
 
 
 # Application definition
