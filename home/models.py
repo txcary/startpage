@@ -12,3 +12,10 @@ class Group(models.Model):
     """Group model"""
     name = models.CharField(max_length=128)
     priority = models.IntegerField()
+    
+class Search(models.Model):
+    """Search model"""
+    name = models.CharField(max_length=128)
+    image = models.CharField(max_length=1024, blank=True)
+    urlPartBeforeKeywords = models.CharField(max_length=1024)
+    urlPartAfterKeywords = models.CharField(max_length=1024)
