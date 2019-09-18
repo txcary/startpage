@@ -1,0 +1,18 @@
+version: '2'
+services:
+ pplatform:
+  image: docker.io/txcary/django:181111
+  container_name: startpage
+  command: /runserver.sh
+  stdin_open: true
+  tty: true
+  working_dir: /workspace/startpage
+  ports: 
+   - 8000:8000
+  volumes:
+   - /workspace:/workspace
+   - ./entrypoint.sh:/entrypoint.sh
+   - ./runserver.sh:/runserver.sh
+  environment:
+   - PERL5LIB=/workspace/pplatform
+  entrypoint: /entrypoint.sh
