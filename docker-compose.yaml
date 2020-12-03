@@ -1,6 +1,6 @@
 version: '2'
 services:
- pplatform:
+ startpage:
   image: docker.io/txcary/django:181111
   container_name: startpage
   command: /runserver.sh
